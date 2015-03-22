@@ -19,10 +19,7 @@ set autoindent
 set smarttab
 set smartindent
 
-filetype indent plugin on
-
-autocmd FileType python setlocal ts=4 sw=4 sts=4 tw=79
-autocmd FileType c setlocal ts=4 sw=4 sts=4 tw=79
+filetype plugin on
 
 " }}}
 
