@@ -43,7 +43,7 @@ exe pathogen#infect()
 
 " vim-latex
 set grepprg=grep\ -nH\ $*
-set g:tex_flavor='latex'
+let g:tex_flavor='latex'
 
 " Vim projects
 if filereadable(".project.vim")
