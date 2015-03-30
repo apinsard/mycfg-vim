@@ -20,6 +20,7 @@ set smarttab
 set smartindent
 
 filetype plugin on
+filetype plugin indent on
 
 " }}}
 
