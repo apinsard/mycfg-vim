@@ -6,6 +6,9 @@ set list
 set listchars=tab:▶-,eol:↵,nbsp:▒
 highlight NonText ctermfg=0
 highlight SpecialKey ctermfg=0
+highlight ExtraWhitespace ctermbg=red
+
+match ExtraWhitespace /\s\+$/
 
 " }}}
 
@@ -27,6 +30,11 @@ filetype plugin indent on
 
 " {{{ Visual select text between XML tags
 nnoremap vi> F>lvf<h
+
+" }}}
+
+" {{{ Remove extra whitespaces
+com -nargs=0 -range=% RemoveExtraWhitespaces <line1>,<line2>s/\s\+$//
 
 " }}}
 
