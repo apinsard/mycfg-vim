@@ -6,9 +6,6 @@ set list
 set listchars=tab:▶-,eol:↵,nbsp:▒
 highlight NonText ctermfg=0
 highlight SpecialKey ctermfg=0
-highlight ExtraWhitespace ctermbg=red
-
-match ExtraWhitespace /\s\+$/
 
 " }}}
 
@@ -58,5 +55,11 @@ let g:tex_flavor='latex'
 if filereadable(".project.vim")
     source .project.vim
 endif
+
+" }}}
+
+" {{{ Detect trailing whitespaces
+highlight ExtraWhitespace ctermbg=red
+match ExtraWhitespace /\s\+$/
 
 " }}}
