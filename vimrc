@@ -3,7 +3,7 @@ set background=dark
 set nohls
 
 set list
-set listchars=tab:▶-,eol:↵,nbsp:▒
+set listchars=tab:▶-,eol:↵,nbsp:▒,trail:.
 highlight NonText ctermfg=0
 highlight SpecialKey ctermfg=0
 
@@ -37,7 +37,7 @@ com -nargs=0 -range=% RemoveExtraWhitespaces <line1>,<line2>s/\s\+$//
 
 
 " {{{ Miscellaneous
-"set modeline " /!\ Known vulnerabilities and exploits
+set modeline
 set ignorecase
 set smartcase
 set incsearch
@@ -55,11 +55,5 @@ let g:tex_flavor='latex'
 if filereadable(".project.vim")
     source .project.vim
 endif
-
-" }}}
-
-" {{{ Detect trailing whitespaces
-highlight ExtraWhitespace ctermbg=red
-match ExtraWhitespace /\s\+$/
 
 " }}}
