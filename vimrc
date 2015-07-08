@@ -62,9 +62,3 @@ if filereadable(".project.vim")
 endif
 
 " }}}
-
-" {{{ Highlight extra whitespaces
-highlight ExtraWhitespace ctermbg=red
-match ExtraWhitespace /\s\+$/
-
-" }}}
