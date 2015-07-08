@@ -44,6 +44,11 @@ set incsearch
 
 inoremap <C-X><C-V> <ESC>:set paste<CR>"+p<ESC>:set nopaste<CR>i
 
+let g:AutoPairsShortcutToggle = '<Nop>'
+let g:AutoPairsShortcutFastWrap = '<Nop>'
+let g:AutoPairsShortcutJump = '<Nop>'
+let g:AutoPairsShortcutBackInsert = '<Nop>'
+
 " Pathogen
 exe pathogen#infect()
 
@@ -53,7 +58,7 @@ let g:tex_flavor='latex'
 
 " Vim projects
 if filereadable(".project.vim")
-    source .project.vim
+  source .project.vim
 endif
 
 " }}}
