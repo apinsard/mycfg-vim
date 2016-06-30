@@ -7,7 +7,7 @@ set listchars=tab:▶-,eol:↵,nbsp:▒,trail:.
 " highlight SpecialKey ctermfg=0
 
 
-let g:color_schemes = ['alduin', 'ubaryd']
+let g:color_schemes = ['ubaryd', 'alduin']
 
 function! SetColorScheme(id)
   let g:color_scheme = a:id % len(g:color_schemes)
@@ -50,9 +50,9 @@ set statusline=%5(%3m%2n%)\ 〉
 set statusline+=%.30f
 set statusline+=%=
 set statusline+=%(\ [%{&ft},%{&ff},%{&fenc}]%)
-set statusline+=%(\ \ %v,%l,0x%B%)
-set statusline+=%(\ \ [%p%%]%)
-set statusline+=%(\ \ [%{GetColorScheme()}]%)
+set statusline+=%(\ \ %2v,%3l,0x%04B%)
+set statusline+=\ %3p%%
+set statusline+=\ %6.6{GetColorScheme()}
 
 " }}}
 
