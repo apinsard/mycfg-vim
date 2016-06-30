@@ -3,30 +3,29 @@ set nohls
 
 set list
 set listchars=tab:▶-,eol:↵,nbsp:▒,trail:.
-highlight NonText ctermfg=0
-highlight SpecialKey ctermfg=0
+" highlight NonText ctermfg=0
+" highlight SpecialKey ctermfg=0
 
-function! SetColorScheme(name)
-  let g:color_scheme=a:name
-  exe "colors " . a:name
+
+let g:color_schemes = ['alduin', 'ubaryd']
+
+function! SetColorScheme(id)
+  let g:color_scheme = a:id % len(g:color_schemes)
+  exe "colors " . g:color_schemes[g:color_scheme]
 endfunction
 
 function! GetColorScheme()
-  return g:color_scheme
+  return g:color_schemes[g:color_scheme]
 endfunction
 
 function! CycleColorScheme()
-  if g:color_scheme == "ubaryd"
-    call SetColorScheme("alduin")
-  else
-    call SetColorScheme("ubaryd")
-  endif
-  echom "Switch color scheme: " . g:color_scheme
+  call SetColorScheme(g:color_scheme + 1)
+  echom "Switch color scheme: " . g:color_schemes[g:color_scheme]
 endfunction
 
-call SetColorScheme("alduin")
-
 nnoremap <F2> :call CycleColorScheme()<CR>
+
+call SetColorScheme(0)
 
 " }}}
 
