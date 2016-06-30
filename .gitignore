@@ -1,2 +1,4 @@
 *.sw[po]
 .netrwhist
+/colors/*
+!/colors/.colorschemes.wget
