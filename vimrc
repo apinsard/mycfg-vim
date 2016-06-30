@@ -46,12 +46,32 @@ filetype plugin indent on
 
 
 " {{{ Status Line
-set statusline=%5(%3m%2n%)\ 〉%<
-set statusline+=%(%f\ %r%)
-set statusline+=%=
-set statusline+=%(\ [%{&ft}]%)
-set statusline+=%(\ %3l,%3v%)
-set statusline+=\ %3p%%
+
+function! SetStatusLine(id)
+  let g:status_line = a:id % 2
+  if g:status_line == 0
+    set statusline=%5(%3m%2n%)\ 〉%<
+    set statusline+=%(%f\ %r%)
+    set statusline+=%=
+    set statusline+=%(\ [%{&ft}]%)
+    set statusline+=%(\ %3l,%3v\ \ %)
+  else
+    set statusline=%5(%3m%2n%)\ 〉%<
+    set statusline+=%(%f\ %r%)
+    set statusline+=%=
+    set statusline+=%(\ [%{&ft},%{&ff},%{&fenc}]%)
+    set statusline+=%(\ %3l,%3v,0x%04B%)
+    set statusline+=\ %3p%%
+  endif
+endfunction
+
+function! CycleStatusLine()
+  call SetStatusLine(g:status_line + 1)
+endfunction
+
+nnoremap <F3> :call CycleStatusLine()<CR>
+
+call SetStatusLine(0)
 
 " }}}
 
