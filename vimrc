@@ -69,6 +69,7 @@ set ignorecase  " Required for smartcase below
 set smartcase   " Case insensitive search if lowercase only
 set incsearch   " Live search while typing
 set showcmd     " Show current normal sequence
+set number      " Show line numbers
 
 " Save as root
 cnoremap w!! w !sudo tee > /dev/null %
