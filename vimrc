@@ -46,13 +46,12 @@ filetype plugin indent on
 
 
 " {{{ Status Line
-set statusline=%5(%3m%2n%)\ 〉
-set statusline+=%.30f
+set statusline=%5(%3m%2n%)\ 〉%<
+set statusline+=%f
 set statusline+=%=
-set statusline+=%(\ [%{&ft},%{&ff},%{&fenc}]%)
-set statusline+=%(\ \ %2v,%3l,0x%04B%)
+set statusline+=%(\ [%{&ft}]%)
+set statusline+=%(\ %3l,%3v%)
 set statusline+=\ %3p%%
-set statusline+=\ %6.6{GetColorScheme()}
 
 " }}}
 
