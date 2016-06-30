@@ -47,7 +47,7 @@ filetype plugin indent on
 
 " {{{ Status Line
 set statusline=%5(%3m%2n%)\ 〉%<
-set statusline+=%f
+set statusline+=%(%f\ %r%)
 set statusline+=%=
 set statusline+=%(\ [%{&ft}]%)
 set statusline+=%(\ %3l,%3v%)
