@@ -81,6 +81,11 @@ com -nargs=0 -range=% RemoveExtraWhitespaces <line1>,<line2>s/\s\+$//
 
 " }}}
 
+" {{{ Tabularize block
+com -nargs=1 -range Tabularize <line1>,<line2>!column -t -s<args> -o<args>
+
+" }}}
+
 
 " {{{ Miscellaneous
 set modeline    " Set vim settings from file comments (modeline)
