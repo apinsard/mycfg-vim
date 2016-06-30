@@ -30,6 +30,17 @@ com -nargs=0 -range=% RemoveExtraWhitespaces <line1>,<line2>s/\s\+$//
 
 " }}}
 
+" {{{ Status Line
+set statusline=%5(%3m%2n%)\ 〉
+set statusline+=%.30f
+set statusline+=%=
+set statusline+=%(\ [%Y]%)
+set statusline+=\ <%v,%l,0x%B>
+set statusline+=\ [%p%%]
+
+
+" }}}
+
 
 " {{{ Miscellaneous
 set modeline
@@ -37,7 +48,8 @@ set ignorecase
 set smartcase
 set incsearch
 
-inoremap <C-X><C-V> <ESC>:set paste<CR>"+p<ESC>:set nopaste<CR>i
+" Save as root
+cnoremap w!! w !sudo tee > /dev/null %
 
 " Pathogen
 exe pathogen#infect()
