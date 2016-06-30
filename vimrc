@@ -81,6 +81,16 @@ exe pathogen#infect()
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
+" }}}
+
+
+" {{{ Load local settings if any
+
+" Local
+if filereadable("~/.config/nvim/local.vim")
+  source ~/.config/nvim/local.vim
+endif
+
 " Vim projects
 if filereadable(".project.vim")
   source .project.vim

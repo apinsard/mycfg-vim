@@ -2,3 +2,4 @@
 .netrwhist
 /colors/*
 !/colors/.colorschemes.wget
+local.vim
