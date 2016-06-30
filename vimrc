@@ -25,28 +25,29 @@ filetype plugin indent on
 " }}}
 
 
+" {{{ Status Line
+set statusline=%5(%3m%2n%)\ 〉
+set statusline+=%.30f
+set statusline+=%=
+set statusline+=%(\ [%{&ft},%{&ff},%{&fenc}]%)
+set statusline+=%(\ \ %v,%l,0x%B%)
+set statusline+=%(\ \ [%p%%]%)
+
+" }}}
+
+
 " {{{ Remove extra whitespaces
 com -nargs=0 -range=% RemoveExtraWhitespaces <line1>,<line2>s/\s\+$//
 
 " }}}
 
-" {{{ Status Line
-set statusline=%5(%3m%2n%)\ 〉
-set statusline+=%.30f
-set statusline+=%=
-set statusline+=%(\ [%Y]%)
-set statusline+=\ <%v,%l,0x%B>
-set statusline+=\ [%p%%]
-
-
-" }}}
-
 
 " {{{ Miscellaneous
-set modeline
-set ignorecase
-set smartcase
-set incsearch
+set modeline    " Set vim settings from file comments (modeline)
+set ignorecase  " Required for smartcase below
+set smartcase   " Case insensitive search if lowercase only
+set incsearch   " Live search while typing
+set showcmd     " Show current normal sequence
 
 " Save as root
 cnoremap w!! w !sudo tee > /dev/null %
