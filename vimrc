@@ -88,12 +88,14 @@ com -nargs=1 -range Tabularize <line1>,<line2>!column -t -s<args> -o<args>
 
 
 " {{{ Miscellaneous
-set modeline    " Set vim settings from file comments (modeline)
-set ignorecase  " Required for smartcase below
-set smartcase   " Case insensitive search if lowercase only
-set incsearch   " Live search while typing
-set showcmd     " Show current normal sequence
-set number      " Show line numbers
+set modeline      " Set vim settings from file comments (modeline)
+set ignorecase    " Required for smartcase below
+set smartcase     " Case insensitive search if lowercase only
+set incsearch     " Live search while typing
+set showcmd       " Show current normal sequence
+set number        " Show line numbers
+set winwidth=85   " 80 + 4 (line numbers) + 1 (signs)
+set winheight=10  " Sounds good
 
 " Save as root
 cnoremap w!! w !sudo tee > /dev/null %
