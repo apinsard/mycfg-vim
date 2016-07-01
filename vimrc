@@ -101,15 +101,14 @@ set winheight=10  " Sounds good
 cnoremap w!! w !sudo tee > /dev/null %
 
 " Disable moves in insert mode
-inoremap <UP> <ESC>
-inoremap <DOWN> <ESC>
-inoremap <LEFT> <ESC>
-inoremap <RIGHT> <ESC>
-inoremap <HOME> <ESC>
-inoremap <END> <ESC>
-" Backspace is nice for completion :P
-inoremap <BACKSPACE> <C-N>
-inoremap <DEL> <ESC>
+inoremap <UP> <C-O>:echoerr "Don't even think about it"<CR>
+inoremap <DOWN> <C-O>:echoerr "Don't even think about it"<CR>
+inoremap <LEFT> <C-O>:echoerr "Don't even think about it"<CR>
+inoremap <RIGHT> <C-O>:echoerr "Don't even think about it"<CR>
+inoremap <HOME> <C-O>:echoerr "Don't even think about it"<CR>
+inoremap <END> <C-O>:echoerr "Don't even think about it"<CR>
+inoremap <BACKSPACE> <C-O>:echoerr "Don't even think about it"<CR>
+inoremap <DEL> <C-O>:echoerr "Don't even think about it"<CR>
 
 " Pathogen
 exe pathogen#infect()
