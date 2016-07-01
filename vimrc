@@ -107,7 +107,9 @@ inoremap <LEFT> <ESC>
 inoremap <RIGHT> <ESC>
 inoremap <HOME> <ESC>
 inoremap <END> <ESC>
-inoremap <BACKSPACE> <ESC>
+" Backspace is nice for completion :P
+inoremap <BACKSPACE> <C-N>
+inoremap <DEL> <ESC>
 
 " Pathogen
 exe pathogen#infect()
