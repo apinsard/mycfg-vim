@@ -100,6 +100,14 @@ set winheight=10  " Sounds good
 " Save as root
 cnoremap w!! w !sudo tee > /dev/null %
 
+" Disable moves in insert mode
+inoremap <UP> <nop>
+inoremap <DOWN> <nop>
+inoremap <LEFT> <nop>
+inoremap <RIGHT> <nop>
+inoremap <HOME> <nop>
+inoremap <END> <nop>
+
 " Pathogen
 exe pathogen#infect()
 
@@ -108,6 +116,7 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 " }}}
+"
 
 
 " {{{ Load local settings if any
