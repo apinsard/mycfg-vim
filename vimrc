@@ -101,12 +101,13 @@ set winheight=10  " Sounds good
 cnoremap w!! w !sudo tee > /dev/null %
 
 " Disable moves in insert mode
-inoremap <UP> <nop>
-inoremap <DOWN> <nop>
-inoremap <LEFT> <nop>
-inoremap <RIGHT> <nop>
-inoremap <HOME> <nop>
-inoremap <END> <nop>
+inoremap <UP> <ESC>
+inoremap <DOWN> <ESC>
+inoremap <LEFT> <ESC>
+inoremap <RIGHT> <ESC>
+inoremap <HOME> <ESC>
+inoremap <END> <ESC>
+inoremap <BACKSPACE> <ESC>
 
 " Pathogen
 exe pathogen#infect()
