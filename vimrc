@@ -54,7 +54,7 @@ function! SetStatusLine(id)
     set statusline+=%(%f\ %r%)
     set statusline+=%=
     set statusline+=%(\ [%{&ft}]%)
-    set statusline+=%(\ %3l,%3v\ \ %)
+    set statusline+=%(\ %3v\ \ %)
   else
     set statusline=%5(%3m%2n%)\ 〉%<
     set statusline+=%(%f\ %r%)
