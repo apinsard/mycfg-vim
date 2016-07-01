@@ -111,8 +111,8 @@ let g:tex_flavor='latex'
 " {{{ Load local settings if any
 
 " Local
-if filereadable("~/.config/nvim/local.vim")
-  source ~/.config/nvim/local.vim
+if filereadable("$HOME/.config/nvim/local.vim")
+  source $HOME/.config/nvim/local.vim
 endif
 
 " Vim projects
