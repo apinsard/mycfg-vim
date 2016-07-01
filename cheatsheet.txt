@@ -1,0 +1,59 @@
+Moves
+=====
+
+w          | Move to the beginning of the next word
+e          | Move to the end of the current or next word
+b          | Move to the beginning of the current or previous word
+W          | Same as "w" but consider a word is delimited by spaces
+E          | Same as "e" but consider a word is delimited by spaces
+B          | Same as "b" but consider a word is delimited by spaces
+{          | Move to the previous blank line (or sequence of blank lines)
+}          | Move to the next blank line (or sequence of blank lines)
+(          | Move to the previous sentence
+)          | Move to the next sentence
+H          | Move to the top of the window
+L          | Move to the bottom of the window
+M          | Mov to the middle of the window
+f<c>       | Go to next char <c>
+F<c>       | Go to previous char <c>
+t<c>       | Go before next char <c>
+T<c>       | Go before previous char <c>
+/<pattern> | Go to next instance of text matching <pattern>
+?<pattern> | Go to previous instance of text matching <pattern>
+n          | Go to next instance of last searched pattern
+N          | Go to previous instance of last searched pattern
+*          | Go to the next instance of the word under the cursor
+%          | Go to matching pair if cursor is under (, ", ', [, ...
+
+
+Insert text
+===========
+
+i       | Insert text before cursor
+a       | Insert after cursor
+A       | Insert at the end of the line
+I       | Insert at the beginning of the line
+o       | Insert a new line below
+O       | Insert a new line above
+s       | Delete char under cursor and insert
+c<move> | Delete <move> text (eg. ce, cb, c3w, c2}, ...) and insert
+S       | Delete the current line and insert
+C       | Delete from cursor the end of the line and insert
+
+
+Select text
+===========
+
+v     | Go to visual mode
+V     | Go to visual-line mode
+C-v   | Go to visual-block mode
+viw   | Select current word
+vi"   | Select text between ""
+vi'   | Select text between ''
+vi(   | Select text between ()
+vi[   | Select text between []
+vi{   | Select text between {}
+vi<   | Select text between <>
+vit   | Select text between ><
+vip   | Select current paragraph
+vis   | Select current sentence
