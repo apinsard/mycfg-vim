@@ -107,8 +107,8 @@ inoremap <LEFT> <C-O>:echoerr "Don't even think about it"<CR>
 inoremap <RIGHT> <C-O>:echoerr "Don't even think about it"<CR>
 inoremap <HOME> <C-O>:echoerr "Don't even think about it"<CR>
 inoremap <END> <C-O>:echoerr "Don't even think about it"<CR>
-inoremap <BACKSPACE> <C-O>:echoerr "Don't even think about it"<CR>
-inoremap <DEL> <C-O>:echoerr "Don't even think about it"<CR>
+" inoremap <BACKSPACE> <C-O>:echoerr "Don't even think about it"<CR>
+" inoremap <DEL> <C-O>:echoerr "Don't even think about it"<CR>
 
 " Pathogen
 exe pathogen#infect()
