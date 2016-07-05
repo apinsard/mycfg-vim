@@ -87,6 +87,13 @@ com -nargs=1 -range Tabularize <line1>,<line2>!column -t -s<args> -o<args>
 " }}}
 
 
+" {{{ Make tree to the current file if not exists
+com MkTree silent !(a="%"; mkdir -p ${a\%/*})
+com WTree execute ':MkTree' | write
+
+" }}}
+
+
 " {{{ Miscellaneous
 set modeline      " Set vim settings from file comments (modeline)
 set ignorecase    " Required for smartcase below
