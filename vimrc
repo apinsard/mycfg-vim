@@ -94,6 +94,12 @@ com WTree execute ':MkTree' | write
 " }}}
 
 
+" {{{ File skeletons
+au BufNewFile *.py 0r ~/.config/nvim/skel/skel.py
+
+" }}}
+
+
 " {{{ Miscellaneous
 set modeline      " Set vim settings from file comments (modeline)
 set ignorecase    " Required for smartcase below
