@@ -1,4 +1,5 @@
 *.sw[po]
+*.py[co]
 .netrwhist
 /colors/*
 !/colors/.colorschemes.wget
