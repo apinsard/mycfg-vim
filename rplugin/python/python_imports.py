@@ -48,6 +48,18 @@ class PythonImports:
             f.write(''.join(lines))
         self.message("import line saved")
 
+    @neovim.command('ImportIdentifier')
+    def import_identifier(self):
+        line = self.vim.current.line
+        col = self._pos_x()
+        self.message('{}:{}'.format(line, col))
+
+    def _pos_x(self):
+        return int(self.vim.eval("col('.')"))
+
+    def _pos_y(self):
+        return int(self.vim.eval("line('.')"))
+
     def _build_import_line(self, **kwargs):
         pattern = 'import {import}'
         if kwargs.get('from'):
