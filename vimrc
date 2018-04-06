@@ -114,12 +114,12 @@ set winheight=10  " Sounds good
 cnoremap w!! w !sudo tee > /dev/null %
 
 " Disable moves in insert mode
-inoremap <UP> <C-O>:echoerr "Don't even think about it"<CR>
-inoremap <DOWN> <C-O>:echoerr "Don't even think about it"<CR>
-inoremap <LEFT> <C-O>:echoerr "Don't even think about it"<CR>
-inoremap <RIGHT> <C-O>:echoerr "Don't even think about it"<CR>
-inoremap <HOME> <C-O>:echoerr "Don't even think about it"<CR>
-inoremap <END> <C-O>:echoerr "Don't even think about it"<CR>
+inoremap <UP> <Esc><RIGHT><UP>
+inoremap <DOWN> <Esc><RIGHT><DOWN>
+inoremap <LEFT> <Esc>
+inoremap <RIGHT> <Esc>2<RIGHT>
+inoremap <HOME> <Esc>^
+inoremap <END> <Esc>$
 " inoremap <BACKSPACE> <C-O>:echoerr "Don't even think about it"<CR>
 " inoremap <DEL> <C-O>:echoerr "Don't even think about it"<CR>
 
@@ -129,6 +129,9 @@ exe pathogen#infect()
 " vim-latex
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+
+" vim-syntastic
+let g:syntastic_always_populate_loc_list = 1
 
 " }}}
 "
