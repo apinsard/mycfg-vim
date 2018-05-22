@@ -7,7 +7,7 @@ set listchars=tab:▶-,eol:↵,nbsp:▒,trail:.
 " highlight SpecialKey ctermfg=0
 
 
-let g:color_schemes = ['ubaryd', 'alduin']
+let g:color_schemes = ['ubaryd', 'alduin', 'default']
 
 function! SetColorScheme(id)
   let g:color_scheme = a:id % len(g:color_schemes)
