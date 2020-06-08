@@ -1,3 +1,11 @@
+let mapleader = ","
+
+function! PreserveView(cmd)
+  let l:winview = winsaveview()
+  exe a:cmd
+  call winrestview(l:winview)
+endfunction
+
 " {{{ Look and feel
 set nohls
 
@@ -110,6 +118,9 @@ set number        " Show line numbers
 set winwidth=85   " 80 + 4 (line numbers) + 1 (signs)
 set winheight=10  " Sounds good
 
+" Make star-search always case sensitive
+nnoremap * /\C\<<C-R><C-W>\><CR>
+
 " Save as root
 cnoremap w!! w !sudo tee > /dev/null %
 
@@ -122,6 +133,16 @@ inoremap <HOME> <Esc>^
 inoremap <END> <Esc>$
 " inoremap <BACKSPACE> <C-O>:echoerr "Don't even think about it"<CR>
 " inoremap <DEL> <C-O>:echoerr "Don't even think about it"<CR>
+
+" Tags
+command! MakeTags !ctags -R --exclude=@.ctagsignore .
+
+" Fuzzy file search
+set path+=**
+set wildignore+=**/__pycache__/**,*.mo
+
+" Isort
+command! Isort call PreserveView('%!isort -y -')
 
 " Pathogen
 exe pathogen#infect()
