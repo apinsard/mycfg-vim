@@ -89,6 +89,7 @@ com -nargs=0 -range=% RemoveExtraWhitespaces <line1>,<line2>s/\s\+$//
 
 " }}}
 
+
 " {{{ Tabularize block
 com -nargs=1 -range Tabularize <line1>,<line2>!column -t -s<args> -o<args>
 
@@ -104,6 +105,7 @@ com WTree execute ':MkTree' | write
 
 " {{{ File skeletons
 au BufNewFile *.py 0r ~/.config/nvim/skel/skel.py
+au BufNewFile */management/commands/[^_]*.py 1r ~/.config/nvim/skel/django/command.py
 
 " }}}
 
